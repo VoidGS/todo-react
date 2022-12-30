@@ -1,0 +1,89 @@
+.taskContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--gray-500);
+    border-radius: 8px;
+    border: 1px solid var(--gray-400);
+    padding: 1rem;
+}
+
+.taskContainer + .taskContainer {
+    margin-top: 0.75rem;
+}
+
+.contentWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doneCheck {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--blue);
+    border-radius: 999px;
+    cursor: pointer;
+    margin-right: 1.05rem;
+    transform: .2s;
+}
+
+.checkmark {
+    display: none;
+    height: 0.6rem;
+    position: absolute;
+    transform: translate(35%, 15%);
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.doneCheck:hover {
+    border: 2px solid var(--blue-dark);
+    background-color: var(--blue-dark-20);
+}
+
+.doneCheck:checked + .checkmark{
+    display: block;
+}
+
+.doneCheck:checked {
+    border: 2px solid var(--purple-dark);
+    background-color: var(--purple-dark);
+}
+
+.doneCheck:checked:hover{
+    border: 2px solid var(--purple);
+    background-color: var(--purple);
+}
+
+.content {
+    font-size: 0.875rem;
+    color: var(--gray-100);
+    transition: .2s;
+}
+
+.doneCheck:checked ~ .contentWrapper .content {
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+.deleteBtn {
+    padding: 0.3rem;
+    background: none;
+    border: 0;
+    outline: none;
+    max-height: 2.1rem;
+    border-radius: 4px;
+    color: var(--gray-300);
+    margin-left: 0.75rem;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
+    background-color: var(--gray-400);
+    color: var(--danger);
+}

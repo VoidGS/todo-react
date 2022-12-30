@@ -1,0 +1,45 @@
+.addTaskContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 46rem;
+    height: 3.375rem;
+    margin: calc(0px - 1.6875rem) auto;
+}
+
+.addTaskContainer input {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    color: var(--gray-100);
+    background-color: var(--gray-500);
+
+    margin-right: 0.5rem;
+}
+
+.addTaskContainer input::placeholder {
+    color: var(--gray-300);
+}
+
+.formButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-dark);
+    color: var(--gray-100);
+    border: none;
+    border-radius: 8px;
+    padding: 1.4rem;
+    transition: .1s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formButton:hover {
+    background-color: var(--blue);
+}
+
+.buttonIcon {
+    margin-left: 0.3rem;
+}
